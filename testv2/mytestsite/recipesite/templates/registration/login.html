@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="{% static 'recipesite/css/auto_style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  </head>
+  <body>
+      <header>
+          <p class="form_auth_block_head_text">Sign In</p>
+          </header>
+    <main>
+        <div class="form_auth_block">
+            <div class="form_auth_block_content">
+              <form class="form_auth_style" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                {{ form.as_p }}
+                <!--<label>User Name</label>
+                <input type="username" name="" placeholder="User Name" required >
+                <label>Password</label>
+                <input type="password" name="auth_pass" placeholder="Password" required > -->
+                <button class="form_auth_button" type="submit" name="form_auth_submit">Sign In</button>
+              </form>
+            </div>
+        </div>
+        <!-- <label class = "sign_up">New User? </label>  -->
+        <!-- <a href="/reg.html"><input type="button" class="form_reg_button" name="form_reg_submit" value="Sign Up!"></a> -->
+    </main>
+  </body>
+</html>

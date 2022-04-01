@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('http://fonts.cdnfonts.com/css/pf-beausans-pro');
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+.menu ul {
+    
+    list-style: none;
+    padding-left: 0%;
+    margin-top: 17%;
+
+}
+
+.menu 
+{
+    margin-bottom: 2%;
+    background: white;    
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 4px solid moccasin;
+    
+}
+
+.menu a {
+    color: black;
+    font-size: 21px;
+}
+
+.menu li {
+    
+   margin-right: 1em;
+   display: inline-block;
+   font-size: large;
+   font-family: 'Ubuntu Condensed', sans-serif;
+
+}
+
+.menu li::after
+{
+    margin-left: 1em;
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align: bottom;
+    
+}
+
+.save {
+    font-size: 17px;
+}
+
+.save button:hover {
+    background-color: yellow;
+}
+
+.parent {
+    padding-right: 0%;
+    padding-left: 16%;
+}
+
+
+.formbtn {
+    width: 94%;
+}
+
+.menu li:last-child:after {
+    content: none;
+}
+
+.wrap {
+    overflow:hidden;
+    flex-grow: 1;
+    margin-bottom: 1%;
+    padding-left: 2%;
+}
+
+.wrap-text {
+    flex-grow: 1;
+    padding-left: 42%;
+    width: 10%;
+}
+
+.wrap-text img {
+    width: 40px;
+    padding-left: 100px;
+    margin-top: -10%;
+}
+
+.main {
+    background-image: url('/static/recipesite/images/wallpaper.jpg');
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.input {
+    margin: 2% 0 0.5% 2%;
+    padding: 1% 1% 1% 1%;
+    background-color: beige;
+}
+
+.catalog {
+    
+    padding-right: 2%;
+    padding-bottom: 2%;
+    background-color: navajowhite;
+    width: 100%;
+    list-style: none; 
+    height: 30%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-top: 2%;
+    
+    margin-top: 2%;
+    align-self: flex-start;
+    margin-left: -15%;
+}
+
+.catalog a {
+    text-decoration: none;
+    color: black;
+}
+
+.catalogue {
+    padding-right: 2%;
+    padding-bottom: 2%;
+    background-color: navajowhite;
+    width: 125%;
+    list-style: none; 
+    height: 30%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-top: 2%;
+    
+    margin-top: 2%;
+    align-self: flex-start;
+    margin-left: -20%;
+}
+
+.catalogue a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.item {
+    
+    margin-left: 0;
+    height: 140px;
+    align-self: center;
+}
+
+.custom_heading {
+    width: 100%;
+}
+    
+
+.item img {
+    width: 20%;
+    height: 100%;
+    float: left; 
+    padding-right: 2%;
+}
+
+.item h2 {
+    margin: 0;
+    font-family: 'PF BeauSans Pro', sans-serif;
+}
+
+.item p {
+    font-size: 17px;
+    
+}
+
+.recipe {
+    margin-top: 2%;
+    background-color: blanchedalmond;
+    width: 60%;
+    padding-bottom: 2%;
+    text-align: justify;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    
+}
+
+.recipe ul {
+    list-style-type: none;
+    text-align: left;
+    background-color: white;
+    padding-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: solid 2px black;
+    border-radius: 10px;
+    border-radius: 3%;
+}
+
+.recipe a {
+    padding: 4% 0 4% 0;
+    text-indent: 25px;
+}
+
+.recipe img {
+    width: 100%;
+    padding: 3% 0 3% 0;
+}
+
+.recipe h2 {
+    margin-bottom: 0;
+    font-family: 'PF BeauSans Pro', sans-serif;
+    padding-top: 2%;
+}
+
+.recipe li {
+    line-height: 1.75;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: -1%;
+    width: 30%;
+    margin-left: 40%;
+    
+}
+
+.buttons form {
+    flex-grow: 1
+}
+
+
+
+.buttons button {
+    width: 70%;
+    height: 150%;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    background-color: olive;
+    border: none;
+}
+
+.fav {
+    margin: 5% 0 5% 30%;
+    padding: 2% 0 2% 0;
+    width: 40%;
+    text-align: center;
+    background-color:white;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 20%;
+}
+
+.content span {
+    flex-grow: 30;
+}
+
+.content form {
+    flex-grow: 1;
+    padding-top: 10%;
+}
+
+.content button {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    background-color: olive;
+    border: none;
+    margin-left: 10px;
+}
+
+.contented {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 20%;
+    flex-direction: column;
+}
+
+.contented span {
+    flex-grow: 30;
+}
+
+.contented h3 {
+    flex-grow: 1;
+    align-self: flex-end;
+    display: flex;
+    /*padding-top: 10%;*/
+}
+
+.contented button {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 17px;
+    background-color: olive;
+    border: none;
+    margin-left: 10px;
+}
+
+.editable {
+    margin-top: 2%;
+    padding-top: 2%;
+    background-color: blanchedalmond;
+    
+    padding-bottom: 2%;
+    text-align: center;
+    
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.editable ul {
+    list-style-type: none;
+    text-align: left;
+    padding-inline-start: 0px;
+}
+
+.editable a {
+    padding: 4% 0 4% 0;
+    text-indent: 25px;
+    
+}
+
+.editable img {
+    visibility: hidden;
+    padding: 3% 0 3% 0;
+}
+
+.editable h2 {
+    margin-bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.editable button {
+    align-self: center;
+}
+
+.editable p {
+    width: 160%;
+    align-self: center;
+}

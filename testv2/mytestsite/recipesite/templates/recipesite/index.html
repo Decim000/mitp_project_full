@@ -1,0 +1,41 @@
+
+{% extends 'recipesite/base.html' %}
+{% load static %}
+
+{% block recipe %}
+
+
+{% for el in recipes %}
+<article class="catalog">
+    <div class="item">
+        <a class="item.pic">
+            <img src="{{ el.photo.url }}">
+        </a>
+        
+        <h2 class="custom_heading">
+            <a href="{% url 'recipe' pk=el.pk %}">
+            {{ el.title }}</a>
+            <!--<a href="{% url 'recipe' pk=el.id %}" idef="{{ el.id }}" class="show" action_url="http://127.0.0.1:8000/recipe/"></a> -->
+        </h2>
+        <div class="content">
+            <div class = "formbtn" id="2">
+            <p>
+            {{ el.description }}
+            </p>
+            
+        </div>
+            {% if not el.save_check%}
+            <form id="{{ el.id }}" method='POST'>
+                <button type="button" class="save" idef="{{ el.id }}" action_url="http://127.0.0.1:8000/favs/">Save</button>
+            </form>
+            {% else %}
+            <form id="{{ el.id }}" >
+                <button type="button" idef="{{ el.id }}" >Saved</button>
+            </form>
+            {% endif %}
+        </div>
+    </div>
+</article>
+{% endfor %}
+
+{% endblock %}

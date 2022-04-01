@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ fullrecipe.title }}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'recipesite/css/style.css' %}">
+       
+    </head>
+    <body>
+        
+            <div class="menu" width="100%">
+                
+                <div class="wrap"> <a href="http://127.0.0.1:8000/profile/"><img src="{% static 'recipesite/images/logo.png' %}" width="200px"></a></div>
+                
+                <div class="wrap-text">  
+                <!-- <ul>
+                    <li>
+                        <a href="">LOG IN</a>
+                    </li>
+                    <li>
+                        <a href="">REGISTRATION</a>
+                    </li>
+                </ul> -->
+                </div>  
+            </div>
+            <div class="main">
+            <article class="recipe">
+                <h2 >
+                    {{ fullrecipe.title }}
+                </h2>
+                <div class="recipe">
+                <ul>
+                    
+                    <li>
+                        {{ fullrecipe.ingredient1 }}
+                    </li>
+                    <li>
+                        {{ fullrecipe.ingredient2 }}
+                    </li>
+                    <li>
+                        {{ fullrecipe.ingredient3 }}
+                    </li>
+                    <li>
+                        {{ fullrecipe.ingredient4 }}
+                    </li>
+                    <li>
+                        {{ fullrecipe.ingredient5 }}
+                    </li>
+                    <li>
+                        {{ fullrecipe.ingredient6 }}
+                    </li>
+                </ul>
+                
+                    <a>{{ fullrecipe.description1 }}
+                    </a>
+                
+                <img src="{{ fullrecipe.preview.url }}">
+                
+                <a>
+                    {{ fullrecipe.description2 }}
+                </a>
+                <a>Минутка мотивации!</a>
+                <img src="{{ fullrecipe.motivation.url }}">
+                </div>
+            </article>
+        </div>
+    </body>
+</html>

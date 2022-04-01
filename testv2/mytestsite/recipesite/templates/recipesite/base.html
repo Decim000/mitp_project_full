@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Authorized</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'recipesite/css/style.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    </head>
+    <body>
+        
+            <div class="menu" width="100%">
+                
+                <div class="wrap"><a href="http://127.0.0.1:8000/profile/"><img src="{% static 'recipesite/images/logo.png' %}" width="200px"></a></div>
+                
+                <div class="wrap-text">  
+                <ul>
+                    <li>
+                        <a href="http://127.0.0.1:8000/favs/"><img src="{% static 'recipesite/images/user.svg' %}"></a>
+                    </li>
+                </ul>
+                </div>  
+            </div>
+            <div class="main">
+                <article class="input">
+                    <input type="search" name="q" placeholder=" " size="40%" >
+                    <input type="submit" value="search">
+                </article>
+                <div class="parent">
+                    {% block recipe %}{% endblock %}
+                </div>
+            </div>
+        <script src="{% static 'recipesite/js/save.js' %}"></script>
+        <script src="{% static 'recipesite/js/show.js' %}"></script>
+    </body>
+</html>
